@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--goit-markup-hw-04 DENYS TYMOFIEIEV-->
+<!--goit-markup-hw-05 DENYS TYMOFIEIEV-->
 <!--Главная страница Студия-->
 <html lang="ru">
   <head>
@@ -28,7 +28,9 @@
           </a>
           <!--Navigation list links in header-->
           <ul class="nav-block">
-            <li class="list"><a class="active-link" href="./">Студия</a></li>
+            <li class="list">
+              <div><a class="active-link" href="./">Студия</a></div>
+            </li>
             <li class="list"><a href="./portfolio.html">Портфолио</a></li>
             <li class="list"><a href="">Контакты</a></li>
           </ul>
@@ -62,7 +64,7 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <button class="hero-button">Заказать услугу</button>
+          <button class="hero-button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!--Section advantage block-->
@@ -125,29 +127,32 @@
         <div class="wedo container">
           <h2>Чем мы занимаемся</h2>
           <ul class="wedo-img">
-            <li>
+            <li class="wedo-li">
               <a href=""
                 ><img
                   src="./images/img1.jpg"
                   width="370"
                   alt="Десктопное приложение"
               /></a>
+              <h3 class="wedo-box">Десктопное приложение</h3>
             </li>
-            <li>
+            <li class="wedo-li">
               <a href=""
                 ><img
                   src="./images/img2.jpg"
                   width="370"
                   alt="Мобильное приложение"
               /></a>
+              <h3 class="wedo-box">Мобильное приложение</h3>
             </li>
-            <li>
+            <li class="wedo-li">
               <a href=""
                 ><img
                   src="./images/img3.jpg"
                   width="370"
                   alt="Дизайнерское решение"
               /></a>
+              <h3 class="wedo-box">Дизайнерское решение</h3>
             </li>
           </ul>
         </div>
@@ -358,6 +363,18 @@
         </div>
       </section>
       <!--Footer area - down page-->
+      <!--Model window-->
+      <div class="backdrope is-hidden" data-modal>
+        <div class="modal">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
+            et sit animi mollitia quasi voluptate rem quod, facilis odit nisi
+            exercitationem fugiat enim optio earum vero reprehenderit libero hic
+            blanditiis.
+          </p>
+          <button data-modal-close>Закрыть</button>
+        </div>
+      </div>
     </main>
     <footer>
       <!--Logo links in the header-->
@@ -413,5 +430,6 @@
         </ul>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

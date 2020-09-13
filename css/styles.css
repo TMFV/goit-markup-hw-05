@@ -119,6 +119,9 @@ header > div {
 }
 .list > a {
   color: var(--h2-text-color);
+    transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list > a:hover,
 .list > a:focus {
@@ -139,11 +142,31 @@ header > div {
   align-items: center;
   color: var(--p-text-color);
   fill: #757575;
+  transition-property: color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
 }
 .list-contacts > a:hover,
 .list-contacts > a:focus {
   color: var(--Logo-blue-color);
   fill: var(--Logo-blue-color);
+}
+.list {
+  position: relative;
+}
+
+.list div::after{
+  content: '';
+  position: absolute;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  bottom: -32px;
+  left: 0px;
+  background-color: var(--Logo-blue-color);
+
 }
 /* nav-block стилі для блоку посилань хедера*/
 .nav-block {
@@ -200,6 +223,10 @@ header > div {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -269,6 +296,34 @@ header > div {
   justify-content: space-between;
   margin-top: 50px;
   margin-bottom: 0px;
+}
+.wedo-li{
+  position: relative;
+  max-height: 294px;
+}
+.wedo-box{
+  position: absolute;
+
+  width: 100%;
+  height: 70px;
+  margin: 0%;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--Logo-white-color);
+  background: rgba(47, 48, 58, 0.8);
+  pointer-events: none;
 }
 /* Оформлення Наша Команда*/
 .team-section {
@@ -353,7 +408,6 @@ footer {
   flex-direction: row;
 }
 
-}
 address {
   font-style: normal;
   font-weight: normal;
@@ -408,6 +462,9 @@ button.filter {
   border-radius: 4px;
   box-shadow: none;
   border: none;
+  transition-property: color background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 button.filter:hover,
 button.active:focus {
@@ -536,6 +593,9 @@ p.img-p {
   padding: 12px 12px 12px 12px;
   border-radius: 50%;
   border-color: var(--Logo-white-color);
+  transition-property: color fill border-color background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-li a:hover,
 .social-li a:focus {
@@ -562,6 +622,10 @@ p.img-p {
 
   border-radius: 4px;
   border-color: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus {
@@ -588,6 +652,12 @@ p.img-p {
   border-radius: 50%;
   border-color: var(--footer-header-background);
   background-color: rgba(255, 255, 255, 0.1) ;
+
+  transition-property: fill border-color background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  
 }
 .social-li-down a:hover,
 .social-li-down a:focus {
@@ -612,4 +682,66 @@ line-height: 16px;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--Logo-white-color);
+}
+.pr-div{
+  width: 100%;
+  heighth:100%;
+  }
+/* Портфолио переход для проекта*/
+.project-im{
+position: relative;
+overflow: hidden;
+}
+.project-text{
+position: absolute;
+opacity: 1;
+/*0*/
+width: 100%;
+height: 100%;
+padding:63px 24px 63px 24px;
+bottom: -4px;
+left: 0px;
+background-color: rgba(33, 150, 243, 0.9);;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 1.56;
+/* or 156% */
+letter-spacing: 0.03em;
+color: var(--Logo-white-color);
+overflow: hidden;
+transform: translateY(316px);
+transition-property: transform;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-li:hover .project-text,
+.project-li:focus .project-text{
+transform: translateY(15px);
+}
+section > div > ul::backdrop{
+  background-color: var(--p-text-color);
+}
+.is-hidden{
+  display: none;
+}
+
+.modal {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  padding: 15px;
+  border: 3px solid #afb1b9;
+  border-radius: 10px;
+  color: #212121;
+  background-color: #afb1b8;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
 }
