@@ -739,7 +739,7 @@ section > div > ul::backdrop{
   background-color: #afb1b8;
 
   position: absolute;
-  top: 0;
+  top: -25%;
   right: 0;
   bottom: 0;
   left: 0;
